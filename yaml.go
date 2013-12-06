@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"launchpad.net/goyaml"
 	"log"
-	"menteslibres.net/gosexy/dig"
+	"github.com/hiphoox/dig"
 	"os"
 	"reflect"
 	"strings"
