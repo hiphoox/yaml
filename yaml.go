@@ -220,3 +220,7 @@ func (self *Yaml) Read(filename string) error {
 
 	return nil
 }
+
+func (self* Yaml) Values() map[string]interface{} { 
+  return self.values 
+}
