@@ -221,6 +221,22 @@ func (self *Yaml) Read(filename string) error {
 	return nil
 }
 
+/*
+	Loads a YAML structure from byte array. Can be used when the source is loaded from a string
+
+	yaml = yaml.New()
+  yaml.ReadFromByteArray(fileContent)
+*/
+func (self *Yaml) ReadFromByteArray(fileContent []byte) error {
+	err := yaml.Unmarshal(fileContent, &self.values)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (self* Yaml) Values() map[string]interface{} { 
   return self.values 
 }
